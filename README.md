@@ -89,7 +89,7 @@ market.oceanprotocol.com/asset/<did>
 ## HOW TO TEST IT LOCALLY
 -----
 
-Once all the required environment variables are updated.
+Once all the required environment variables are updated in the .env file (use .env.template as reference)
 
 1. The first step is to run the grant_data_extract job which
  extracts data from the graph & updates to ipfs
@@ -129,6 +129,20 @@ Once all the required environment variables are updated.
     ```
     python run.py -n transform_data_to_db
     ```
+
+## Deployment
+-----
+
+These jobs are currently deployed in AWS Batch using [Dockerfile](https://github.com/kikura3/gtclooker-legos/blob/master/Dockerfile)
+
+```
+docker build -t gitcoin-legos .
+docker run --env-file .env python run.py -n grant_data_extract
+docker run --env-file .env python run.py -n grant_data_aggregate
+docker run --env-file .env python run.py -n wallet_insights
+docker run --env-file .env python run.py -n project_insights
+docker run --env-file .env python run.py -n transform_data_to_db
+```
 
 ## FAQ
 
