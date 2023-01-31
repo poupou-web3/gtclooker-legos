@@ -151,17 +151,15 @@ Modify [subgraph](https://github.com/kikura3/gitcoin-grant-data-subgraph) to inc
 
 2. What are the contracts used by the deployed version?
 
+```
 Polygon Test:
-
 0x9F34594703B35052c698DCF8cad0fBeEd9C90560 (Data store)
-
 did:op:19890202b2f6625f068af1297def7e35fadabeb3466a31278bd0cd293ca8374a (Data Asset)
 
 Polygon Prod:
-
 0x9013a394028D5c0CCaaa7Bd751793ccaC5ce481B (Data store)
-
 did:op:5e51587660fc4b58f1626e2d675d6094ce2562313d67f4808206ae11bb143dcf (Data Asset)
+```
 
 ----------
 
