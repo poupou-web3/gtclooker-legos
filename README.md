@@ -8,11 +8,11 @@
 | -------------------| ------------ | ---------------------------- | ----- |
 | Grant Data Extract | Data Extraction | [grant_data_extract](https://github.com/kikura3/gtclooker-legos/tree/master/src/jobs/grant_data_extract) | Extract Grant Applications and Votes Data from Chain, Update to IPFS      |
 | Grant Data Aggregate | Data Extraction   | [grant_data_aggregate](https://github.com/kikura3/gtclooker-legos/tree/master/src/jobs/grant_data_aggregate)        |   Extract Data from IPFS, Aggregate and Update Asset in Ocean Protocol for Community's Near Real-Time Access    |
-| Farmer | Metrics  | wallet_insights((https://github.com/kikura3/gtclooker-legos/tree/master/src/jobs/wallet_insights) | Tag Grantee/Contributor Wallets Meeting Farmer Criteria |
-| Money Mixer | Metrics | wallet_insights((https://github.com/kikura3/gtclooker-legos/tree/master/src/jobs/wallet_insights)  | Tag Grantee/Contributor Wallets Interacted with Tornado Cash |
-| On Chain History | Metrics | wallet_insights((https://github.com/kikura3/gtclooker-legos/tree/master/src/jobs/wallet_insights) | Tag Grantee/Contributor Wallets with Onchain History |
-| Vote Twitter Imbalance | Metrics | project_insights((https://github.com/kikura3/gtclooker-legos/tree/master/src/jobs/project_insights)  | Tag Projects with More Votes Than Twitter Followers|
-| Transform Insights to DB | Data Load | transform_data_to_db((https://github.com/kikura3/gtclooker-legos/tree/master/src/jobs/transform_data_to_db)  | Collect Insights and Store in SQL Database for UI Display |
+| Farmer | Metrics  | [wallet_insights](https://github.com/kikura3/gtclooker-legos/tree/master/src/jobs/wallet_insights) | Tag Grantee/Contributor Wallets Meeting Farmer Criteria |
+| Money Mixer | Metrics | [wallet_insights](https://github.com/kikura3/gtclooker-legos/tree/master/src/jobs/wallet_insights)  | Tag Grantee/Contributor Wallets Interacted with Tornado Cash |
+| On Chain History | Metrics | [wallet_insights]((https://github.com/kikura3/gtclooker-legos/tree/master/src/jobs/wallet_insights) | Tag Grantee/Contributor Wallets with Onchain History |
+| Vote Twitter Imbalance | Metrics | [project_insights]((https://github.com/kikura3/gtclooker-legos/tree/master/src/jobs/project_insights)  | Tag Projects with More Votes Than Twitter Followers|
+| Transform Insights to DB | Data Load | [transform_data_to_db]((https://github.com/kikura3/gtclooker-legos/tree/master/src/jobs/transform_data_to_db)  | Collect Insights and Store in SQL Database for UI Display |
 
 Jobs and their dependencies are configured in [jobs.yaml](https://github.com/kikura3/gtclooker-legos/blob/master/src/job.yaml)
 -----
@@ -89,16 +89,10 @@ market.oceanprotocol.com/asset/<did>
 ## HOW TO TEST IT LOCALLY
 -----
 
-&nbsp;
-
 Once all the required environment variables are updated.
-
-&nbsp;
 
 1. The first step is to run the grant_data_extract job which
  extracts data from the graph & updates to ipfs
-
-    
 
     ```
     python3 -m venv venv
@@ -109,14 +103,11 @@ Once all the required environment variables are updated.
 
     PS: The subgraph is currently configured for gitcoin alpha round. It needs to be updated to capture new rounds.
 
-    &nbsp;
-
 2. (Optional) You may want to upload the files as an asset to Ocean protocol. If so, run this
 
     ```
     python run.py -n grant_data_aggregate
     ```
-&nbsp;
 
 3. Run the below jobs in any order to create boolean legos (Farmer, MarketMixer, OnChainHistory, VoteTwitterImbalance)
 
@@ -126,13 +117,12 @@ Once all the required environment variables are updated.
     ```
 
 4. Setup supabase (postgres sql service) to store the insights to a relational DB (to enable faster access)
-    &nbsp;
+
 5. Run the below scripts within supabase SQL editor to create necessary tables
 
     ```
     scripts/db_scripts.sql
     ```        
-    &nbsp;
 
 6. Finally, run the transformation job to load the data/insights to the above database
 
