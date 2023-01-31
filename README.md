@@ -31,7 +31,7 @@ Jobs and their dependencies are configured in [jobs.yaml](https://github.com/kik
 
 | Name               | Value         | Description                          | Used by Lego |
 | -------------------| ------------ | ---------------------------- | ----- |
-| GRAPH_GITCOIN_GRANTS_URL | https://api.studio.thegraph.com/query/41140/gitcoin-grants/v0.0.7 | Subgraph Deployed at the Graph to retrieve grant data | Grant Data Extract      |
+| GRAPH_GITCOIN_GRANTS_URL | https://api.studio.thegraph.com &nbsp;/query/41140/gitcoin-grants/v0.0.7 | Subgraph Deployed at the Graph to retrieve grant data | Grant Data Extract      |
 | WEB3_INFURA_PROJECT_ID | Get it from Infura(FREE) | Required by Ocean protocol to write/read transactions | All Legos      |
 | IPFS_INFURA_* KEYS  | Get it from Infura(FREE until 5GB) | Required to write and pin IPFS files | All Legos      |
 | ACCOUNT_PRIVATE_KEY | Your wallet account private key | This is required by ocean protocol to sign read/write transactions via script | All legos     |
