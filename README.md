@@ -8,11 +8,11 @@
 | -------------------| ------------ | ---------------------------- | ----- |
 | Grant Data Extract | Data Extraction | [grant_data_extract](https://github.com/kikura3/gtclooker-legos/tree/master/src/jobs/grant_data_extract) | Extract Grant Applications and Votes Data from Chain, Update to IPFS      |
 | Grant Data Aggregate | Data Extraction   | [grant_data_aggregate](https://github.com/kikura3/gtclooker-legos/tree/master/src/jobs/grant_data_aggregate)        |   Extract Data from IPFS, Aggregate and Update Asset in Ocean Protocol for Community's Near Real-Time Access    |
-| Farmer | Metrics  | jobs/wallet_insights | Tag Grantee/Contributor Wallets Meeting Farmer Criteria |
-| Money Mixer | Metrics | jobs/wallet_insights | Tag Grantee/Contributor Wallets Interacted with Tornado Cash |
-| On Chain History | Metrics | jobs/wallet_insights| Tag Grantee/Contributor Wallets with Onchain History |
-| Vote Twitter Imbalance | Metrics | jobs/project_insights | Tag Projects with More Votes Than Twitter Followers|
-| Transform Insights to DB | Data Load | jobs/transform_data_to_db | Collect Insights and Store in SQL Database for UI Display |
+| Farmer | Metrics  | wallet_insights((https://github.com/kikura3/gtclooker-legos/tree/master/src/jobs/wallet_insights) | Tag Grantee/Contributor Wallets Meeting Farmer Criteria |
+| Money Mixer | Metrics | wallet_insights((https://github.com/kikura3/gtclooker-legos/tree/master/src/jobs/wallet_insights)  | Tag Grantee/Contributor Wallets Interacted with Tornado Cash |
+| On Chain History | Metrics | wallet_insights((https://github.com/kikura3/gtclooker-legos/tree/master/src/jobs/wallet_insights) | Tag Grantee/Contributor Wallets with Onchain History |
+| Vote Twitter Imbalance | Metrics | project_insights((https://github.com/kikura3/gtclooker-legos/tree/master/src/jobs/project_insights)  | Tag Projects with More Votes Than Twitter Followers|
+| Transform Insights to DB | Data Load | transform_data_to_db((https://github.com/kikura3/gtclooker-legos/tree/master/src/jobs/transform_data_to_db)  | Collect Insights and Store in SQL Database for UI Display |
 
 Jobs and their dependencies are configured in [jobs.yaml](https://github.com/kikura3/gtclooker-legos/blob/master/src/job.yaml)
 -----
