@@ -1,19 +1,20 @@
 
-# Please read [this](https://www.canva.com/design/DAFZQUHbKc8/agH9xR62sv3k1rTnEV5Whw/view?utm_content=DAFZQUHbKc8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton#10) to get an understanding of this module
+# Please read [this](https://www.canva.com/design/DAFZQUHbKc8/agH9xR62sv3k1rTnEV5Whw/view?) to get an understanding of this module
 
  ## Legos
 --------
 
-| Name               | Category         | URL                          | Description |
+| Name               | Category         | Job                          | Description |
 | -------------------| ------------ | ---------------------------- | ----- |
-| Grant Data Extract | Data Extraction | jobs/grant_data_extract | Extract Grant Applications and Votes Data from Chain, Update to IPFS      |
-| Grant Data Aggregate | Data Extraction   | jobs/grant_data_aggregate         |   Extract Data from IPFS, Aggregate and Update Asset in Ocean Protocol for Community's Near Real-Time Access    |
-| Farmer | Metrics  | https://dex.guru/ | Tag Grantee/Contributor Wallets Meeting Farmer Criteria |
-| Money Mixer | Metrics | https://dexscreener.com/ | Tag Grantee/Contributor Wallets Interacted with Tornado Cash |
-| On Chain History | Metrics | https://dexscreener.com/ | Tag Grantee/Contributor Wallets with Onchain History |
-| Vote Twitter Imbalance | Metrics | https://dexscreener.com/ | Tag Projects with More Votes Than Twitter Followers|
-| Transform Insights to DB | Data Load | https://dexscreener.com/ | Collect Insights and Store in SQL Database for UI Display |
+| Grant Data Extract | Data Extraction | [grant_data_extract](https://github.com/kikura3/gtclooker-legos/tree/master/src/jobs/grant_data_extract) | Extract Grant Applications and Votes Data from Chain, Update to IPFS      |
+| Grant Data Aggregate | Data Extraction   | [grant_data_aggregate](https://github.com/kikura3/gtclooker-legos/tree/master/src/jobs/grant_data_aggregate)        |   Extract Data from IPFS, Aggregate and Update Asset in Ocean Protocol for Community's Near Real-Time Access    |
+| Farmer | Metrics  | jobs/wallet_insights | Tag Grantee/Contributor Wallets Meeting Farmer Criteria |
+| Money Mixer | Metrics | jobs/wallet_insights | Tag Grantee/Contributor Wallets Interacted with Tornado Cash |
+| On Chain History | Metrics | jobs/wallet_insights| Tag Grantee/Contributor Wallets with Onchain History |
+| Vote Twitter Imbalance | Metrics | jobs/project_insights | Tag Projects with More Votes Than Twitter Followers|
+| Transform Insights to DB | Data Load | jobs/transform_data_to_db | Collect Insights and Store in SQL Database for UI Display |
 
+Jobs and their dependencies are configured in [jobs.yaml](https://github.com/kikura3/gtclooker-legos/blob/master/src/job.yaml)
 -----
 
 &nbsp;
