@@ -1,0 +1,40 @@
+legos:
+
+  - name: grant_data_extract
+    id: 4329fcc8cbdf4590b0a71f812dacd64b
+
+
+  - name: grant_data_aggregate
+    id: 858275baa21f439c99c71c5d134350da
+    inputs:
+      - name: grant_data_extract
+        id: 4329fcc8cbdf4590b0a71f812dacd64b
+
+  - name: wallet_insights
+    id: 997bc253035b461495017e49f1d6102e
+    inputs:
+      - name: grant_data_extract
+        id: 4329fcc8cbdf4590b0a71f812dacd64b
+    params:
+      tags:
+        - Farmer
+        - OnChainHistory
+        - MoneyMixer
+
+  - name: project_insights
+    id: 21a97d1b6a384425b4e62f610e34e2bb
+    inputs:
+      - name: grant_data_extract
+        id: 4329fcc8cbdf4590b0a71f812dacd64b
+
+  - name: transform_data_to_db
+    id: e5c8c1ea4d004913b50ae3cd8124e863
+    inputs:
+      - name: grant_data_extract
+        id: 4329fcc8cbdf4590b0a71f812dacd64b
+      - name: wallet_insights
+        id: 997bc253035b461495017e49f1d6102e
+      - name: community_stefi_insights_adapter
+        id: 218dbf91d7a14bc8bfd11e0336f22eb5
+      - name: project_insights
+        id: 21a97d1b6a384425b4e62f610e34e2bb

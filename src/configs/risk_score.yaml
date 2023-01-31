@@ -1,0 +1,26 @@
+scores:
+  - name: Grantee    
+    tags:
+      - name: MoneyMixer
+        value : True
+        points : 10
+      - name: OnChainHistory
+        value : False
+        points : 10
+      - name: VoteTwitterImbalance
+        value : True
+        points : 10
+  - name: Contributor    
+    tags:
+      - name: Farmer
+        value : True
+        points : 10
+      - name: MoneyMixer
+        value : True
+        points : 10
+      - name: OnChainHistory
+        value : False
+        points : 10
+      - name: FirstTxDuringRound
+        value : True
+        points : 10
