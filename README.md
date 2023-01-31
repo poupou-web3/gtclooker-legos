@@ -137,5 +137,8 @@ Once all the required environment variables are updated.
     python run.py -n transform_data_to_db
     ```
 
+## FAQ
 
+1. How to get new round data?
+Modify [subgraph](https://github.com/kikura3/gitcoin-grant-data-subgraph) to include the new round address and voting address. The grant extract job will automatically fetch all the rounds available in the graph.
 
