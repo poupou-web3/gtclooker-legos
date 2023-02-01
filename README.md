@@ -22,7 +22,7 @@ Jobs and their dependencies are configured in [jobs.yaml](https://github.com/kik
 
 # How to setup and run the legos?
 
-[Setup Instructions]()
+[Setup Instructions](/docs/HowToRun.md)
 
 &nbsp;
 
