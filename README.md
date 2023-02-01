@@ -40,6 +40,9 @@ Jobs and their dependencies are configured in [jobs.yaml](https://github.com/kik
 
 ## Wallet Insights(Farmer, MoneyMixer etc) : Lego
 
+
+![wallet_insights](/docs/wallet_configuration.png)
+
 ![wallet_insights](/docs/wallet_insights.png)
 
 ## Project Insights(Vote Twitter Imbalance etc) : Lego
