@@ -88,7 +88,7 @@ OR arg_project_id = ''
 $$;
 
 CREATE OR REPLACE FUNCTION wallet_profile(arg_wallet_id text) -- 1
-RETURNS TABLE(id text, tags)
+RETURNS TABLE(id text, tags text)
 language sql -- 3
 as $$  -- 4
 
