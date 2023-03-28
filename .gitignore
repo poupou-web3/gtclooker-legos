@@ -1,0 +1,4 @@
+src/vkikura
+__pycache__
+*.pyc
+.hypothesis
