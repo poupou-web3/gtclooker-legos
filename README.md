@@ -22,7 +22,7 @@ Jobs and their dependencies are configured in [jobs.yaml](https://github.com/kik
 
 # How to setup and run the legos?
 
-[Setup Instructions]()
+[Setup Instructions](/docs/HowToRun.md)
 
 &nbsp;
 
@@ -39,6 +39,9 @@ Jobs and their dependencies are configured in [jobs.yaml](https://github.com/kik
 ![grant_data_aggregate](/docs/grant_data_aggregate.png)
 
 ## Wallet Insights(Farmer, MoneyMixer etc) : Lego
+
+
+![wallet_insights](/docs/wallet_configuration.png)
 
 ![wallet_insights](/docs/wallet_insights.png)
 
