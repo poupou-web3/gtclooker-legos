@@ -23,3 +23,11 @@ def get_followers_count(screen_name):
         return user.followers_count
     except Exception as e:
         return None
+    
+def get_user_info(screen_name):
+    try:
+        screen_name = screen_name.split("/")[-1]
+        user = api.get_user(screen_name=screen_name)
+        return user
+    except Exception as e:
+        return None
